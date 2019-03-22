@@ -1,0 +1,7 @@
+// Larisa Pyykölä, student number 1702357
+.photo {
+    @media only screen and (min-width: 768px) {//media querry so image does not take the whole screen. TODO - center the card and adjust the size more
+        max-width: 40%;
+      
+    }; 
+}
