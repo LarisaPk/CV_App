@@ -1,3 +1,6 @@
+// Larisa Pyykölä, student number 1702357
+// I have not changed anyhting in here
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

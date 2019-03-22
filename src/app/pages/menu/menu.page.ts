@@ -10,15 +10,23 @@ import { Router, RouterEvent } from '@angular/router';
 export class MenuPage implements OnInit {
 // added array of pages
 
-pages = [
+pages = [// array of pages in the menu
   {
-    title: 'First with tabs',
-    url: '/menu/first'
+    title: 'CV Larisa Pyykölä', // cv page
+    url: '/menu/first',
+    icon: 'paper' //added icon for menu CV
   },
   {
-    title: 'second page',
-    url: '/menu/second'
+    title: 'My Projects', // page ith my projects
+    url: '/menu/second',
+    icon: 'hammer'// added ion for menu projects
+  },
+  {
+    title: 'Extra curriculum', // page with extra curriculum
+    url: '/menu/curriculum',
+    icon: 'cube'// added icon for menu curriculum
   }
+
 
 ];
 
@@ -27,11 +35,11 @@ selectedPath = ''; // set new variable
 // modified constructor and subscribe to the change event
   constructor(private router: Router) {
     this.router.events.subscribe ((event: RouterEvent) => {
-      if (event && event.url){
+      if (event && event.url) {
         this.selectedPath = event.url;
 
       }
-    })
+    });
   }
 
   ngOnInit() {

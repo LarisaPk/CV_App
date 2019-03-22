@@ -11,17 +11,23 @@ import { MenuPage } from './menu.page';
 
 const routes: Routes = [
   {
-    path: '', // add children of menu page
+    path: '', // add children of menu page that will be loaded in the menu on the left
     component: MenuPage,
     children: [
       {
-      path: 'first',
-      loadChildren: '../first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule' 
+      path: 'first', // page that contains my CV and tabs
+      loadChildren: '../first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule'
       },
       {
-        path: 'second',
-        loadChildren: '../second/second.module#SecondPageModule' 
-        }
+      path: 'second', // page with my projcts
+        loadChildren: '../second/second.module#SecondPageModule'
+        
+      },
+      {
+      path: 'curriculum', // page with extra curriculum
+      loadChildren: '../curriculum/curriculum.module#CurriculumPageModule'
+      }
+
     ]
 
   }

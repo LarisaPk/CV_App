@@ -1,5 +1,5 @@
 // Larisa Pyykölä, student number 1702357
-// added path to tabs
+// added pathes to tabs (children)
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,17 +16,21 @@ const routes: Routes = [
     component: FirstWithTabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'tab1',// tab about me
         loadChildren: '../tab1/tab1.module#Tab1PageModule'
       },
       {
-        path: 'tab2',
+        path: 'tab2', // tab my education 
         loadChildren: '../tab2/tab2.module#Tab2PageModule'
+      },
+      {
+        path: 'tab3', // tab contacts
+        loadChildren: '../tab3/tab3.module#Tab3PageModule'
       }
     ]
   },
   {
-    path: '', // redirect to tab1 from empty path
+    path: '', // redirect to tab1 from empty path (it will be shown when user clicks login)
     redirectTo: 'tabs/tab1',
     pathMatch: 'full'
 
