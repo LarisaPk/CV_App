@@ -1,12 +1,15 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+//Larisa Pyykölä, student number 1702357
+//changed some colors
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
-  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary: #1f8612;
+  --ion-color-primary-rgb: #ecf1ee;
+  --ion-color-primary-contrast: #fafafa;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
@@ -41,7 +44,7 @@
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
   --ion-color-warning-shade: #e0b500;
-  --ion-color-warning-tint: #ffd31a;
+  --ion-color-warning-tint: #e2c758;
 
   /** danger **/
   --ion-color-danger: #f04141;
@@ -74,4 +77,9 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+//chenged background color
+ion-content{
+  --ion-background-color:rgba(253, 248, 218, 0.795);
 }
