@@ -21,7 +21,6 @@ const routes: Routes = [
       {
       path: 'second', // page with my projcts
         loadChildren: '../second/second.module#SecondPageModule'
-        
       },
       {
       path: 'curriculum', // page with extra curriculum

@@ -1,6 +1,10 @@
 // Larisa Pyykölä, student number 1702357
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+// added import for alart
+import { AlertController } from '@ionic/angular';
+// imports for authentication
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +18,7 @@ pages = [// array of pages in the menu
   {
     title: 'CV Larisa Pyykölä', // cv page
     url: '/menu/first',
-    icon: 'paper' //added icon for menu CV
+    icon: 'paper' // added icon for menu CV
   },
   {
     title: 'My Projects', // page ith my projects
@@ -32,8 +36,8 @@ pages = [// array of pages in the menu
 
 selectedPath = ''; // set new variable
 
-// modified constructor and subscribe to the change event
-  constructor(private router: Router) {
+// modified constructor and subscribed to the change event, added Alert controller and authentication to the construction for fruther use
+  constructor(private router: Router, public alertController: AlertController, public afAuth: AngularFireAuth) {
     this.router.events.subscribe ((event: RouterEvent) => {
       if (event && event.url) {
         this.selectedPath = event.url;
@@ -44,5 +48,31 @@ selectedPath = ''; // set new variable
 
   ngOnInit() {
   }
+  // function that shows confirmation alert with OK and Cancel buttons
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      header: 'Confirm!',
+      message: 'Are you sure you want to log out?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            this.afAuth.auth.signOut().then (() => {
+              this.router.navigate (['login']);
+            });
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
 
+    await alert.present();
+  }
 }

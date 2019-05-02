@@ -20,7 +20,8 @@
           </ion-item>
 
         </ion-menu-toggle>
-        <ion-item tappable routerLink="/login" routerDirection="root">
+        <!--added onclick  function for logout that will show confirmation alert-->
+        <ion-item tappable (click)="presentAlertConfirm()">
           <ion-icon name="log-out" slot="start"></ion-icon>
             Logout
         </ion-item>

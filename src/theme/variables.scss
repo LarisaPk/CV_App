@@ -7,7 +7,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #1f8612;
+  --ion-color-primary: #052f4b;
   --ion-color-primary-rgb: #ecf1ee;
   --ion-color-primary-contrast: #fafafa;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -77,9 +77,4 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
-}
-
-//chenged background color
-ion-content{
-  --ion-background-color:rgba(253, 248, 218, 0.795);
 }
