@@ -10,21 +10,22 @@
   </ion-header>
 
  <!--used grid for adding for completed courses-->
-  <!--TODO - add some styling to this page, so it looks better, make size of icons bigger-->
-
-  <ion-content>
+ 
+  <ion-content padding><!--added padding-->
     <h2>Completed specialization courses</h2>
-    <ion-grid>
+
+    <ion-grid class="courses">
 
       <ion-row>       
         <ion-col>
             &#8226; Web Development
         </ion-col>
                
-        <ion-col>
-              <ion-icon name="logo-css3" style="color: #3b5998" ></ion-icon>
-              <ion-icon name="logo-html5" style="color: #E44D26"></ion-icon>
-        </ion-col>  
+        <ion-col>           
+                    <fa-icon [icon]="['fab', 'html5']" style="color: #E44D26" size ="2x"></fa-icon>
+                    <fa-icon [icon]="['fab', 'css3-alt']" style="color: #3b5998" size ="2x"></fa-icon> 
+                    <fa-icon [icon]="['fab', 'bootstrap']" style="color: #602c50" size ="2x"></fa-icon>                   
+        </ion-col>       
       </ion-row>
 
       <ion-row>       
@@ -33,7 +34,7 @@
           </ion-col>
                  
           <ion-col>
-              <ion-icon name="logo-javascript" ></ion-icon>
+                <fa-icon [icon]="['fab', 'js']" style="color: #f0db4f" size ="2x"></fa-icon>
           </ion-col>  
         </ion-row>
 
@@ -43,7 +44,8 @@
             </ion-col>
                    
             <ion-col>
-                <ion-icon name="ionic" style="color: #498aff"></ion-icon><!--for some reson this icon is not-->
+              <!--  <ion-icon name="ionic" style="color: #498aff"></ion-icon> --><!--for some reson this icon is not working-->
+              <fa-icon [icon]="['far', 'dot-circle']" style="color: #498aff" size ="2x"></fa-icon>
             </ion-col>  
         </ion-row>
 
@@ -53,7 +55,7 @@
             </ion-col>
                    
             <ion-col>
-                <ion-icon name="logo-android" style="color: #A4C639"></ion-icon>
+                <fa-icon [icon]="['fab', 'android']" style="color: #A4C639" size ="2x"></fa-icon>
             </ion-col>  
         </ion-row>  
 
@@ -61,36 +63,41 @@
           <ion-col>
               &#8226; Information Management and Databases
           </ion-col>
+          <ion-col>
+                <fa-icon [icon]="['fas', 'database']"  size ="2x"></fa-icon>
+          </ion-col>  
  
       </ion-row>
 
       <ion-row>       
            <ion-col>
               &#8226; Object-Oriented Programming with Java
-           </ion-col>        
+           </ion-col> 
+           
+           <ion-col>
+                <fa-icon [icon]="['fab', 'java']" style="color:#5382a1" size ="2x"></fa-icon>
+          </ion-col>  
       </ion-row>
 
       <ion-row>       
           <ion-col>
               &#8226; Search Engine Optimization
-          </ion-col>
-                 
+          </ion-col> 
           <ion-col>
-              <ion-icon ios="ios-analytics" md="md-analytics"></ion-icon>
+                <fa-icon [icon]="['fab', 'google']" style="color:#4285F4" size ="2x"></fa-icon>
           </ion-col>  
       </ion-row>   
-
+    </ion-grid>
       <h2>Planned specialization courses</h2>
 
-      <ion-grid>
+      <ion-grid class="courses">
           <ion-row>       
               <ion-col>
                   &#8226; Cross Platform Mobile Apps
               </ion-col>
                      
               <ion-col>
-                  <ion-icon name="logo-angular"></ion-icon>
-                  <ion-icon name="logo-sass"></ion-icon>
+                    <fa-icon [icon]="['fas', 'mobile']" size ="2x"></fa-icon>
               </ion-col>  
           </ion-row> 
 
@@ -100,7 +107,7 @@
               </ion-col>
                      
               <ion-col>
-                  <ion-icon name="logo-wordpress"></ion-icon>
+                    <fa-icon [icon]="['fab', 'wordpress']" style="color:#00749c" size ="2x"></fa-icon>
               </ion-col>  
           </ion-row>    
           
@@ -108,9 +115,13 @@
               <ion-col>
                   &#8226; Web App Development with PHP/SQL
               </ion-col>
+              <ion-col>
+                    <fa-icon [icon]="['fab', 'php']"  size ="2x"></fa-icon>
+              </ion-col>  
+   
  
           </ion-row>        
       </ion-grid>
 
-    </ion-grid>
+    
   </ion-content>

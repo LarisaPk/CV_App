@@ -30,10 +30,7 @@ pages = [// array of pages in the menu
     url: '/menu/curriculum',
     icon: 'cube'// added icon for menu curriculum
   }
-
-
 ];
-
 selectedPath = ''; // set new variable
 
 // modified constructor and subscribed to the change event, added Alert controller and authentication to the construction for fruther use
@@ -48,11 +45,11 @@ selectedPath = ''; // set new variable
 
   ngOnInit() {
   }
-  // function that shows confirmation alert with OK and Cancel buttons
+  // function that shows confirmation alert with OK and Cancel buttons. If OK presse - loggs out and redirects to login page
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
-      header: 'Confirm!',
-      message: 'Are you sure you want to log out?',
+      header: 'Confirmation alert',
+      message: 'Are you sure you want to logout?',
       buttons: [
         {
           text: 'Cancel',

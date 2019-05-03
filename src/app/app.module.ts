@@ -15,6 +15,18 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+// added imports for awesom font
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+// added imports to library
+library.add (fas, far, fab);
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +34,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-     AppRoutingModule],
+    AppRoutingModule,
+    FontAwesomeModule], // added imports for fontawesome here
   providers: [
     StatusBar,
     SplashScreen,

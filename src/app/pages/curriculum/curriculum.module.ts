@@ -1,5 +1,4 @@
 // Larisa Pyykölä, student number 1702357
-// I have not changed anything in here
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CurriculumPage } from './curriculum.page';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // added import
 const routes: Routes = [
   {
     path: '',
@@ -22,6 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    FontAwesomeModule, // added this
     RouterModule.forChild(routes)
   ],
   declarations: [CurriculumPage]

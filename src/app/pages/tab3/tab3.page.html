@@ -12,6 +12,13 @@
 <!--used grid for adding my contacts-->
 <!--TODO - add some styling to this page, so it looks better-->
 <ion-content>
+    <ion-item>
+        Test icon <fa-icon [icon]="['fas', 'ice-cream']" size ="3x" slot="end"></fa-icon>
+      </ion-item>
+  
+      <ion-item>
+        Test icon <fa-icon [icon]="['fas', 'pizza-slice']" [spin]="true" slot="end"></fa-icon>
+      </ion-item>
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -41,5 +48,5 @@
     </ion-row>
     
   </ion-grid>
-
+  
 </ion-content> 
