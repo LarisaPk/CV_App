@@ -2,6 +2,14 @@
 .photo {
     @media only screen and (min-width: 768px) {//media querry so image does not take the whole screen. TODO - center the card and adjust the size more
         max-width: 40%;
+        
       
     }; 
+    background-color: whitesmoke;
+
 }
+:host {
+    ion-content {
+      --background: url('../../../assets/imgs/aboutme.jpg')no-repeat center center / cover;// backgroung 
+    }
+  }

@@ -10,27 +10,45 @@
     </ion-header>
 
     <ion-content>
-      <ion-list>
-        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
-          <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
-            <ion-icon slot="start" [name]="p.icon"></ion-icon>
-            <ion-label>
-              {{p.title}}
-            </ion-label>
-          </ion-item>
+        <div *ngFor="let p of pages">
 
-        </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false" *ngIf="p.url">
+                <ion-item [routerLink]="p.url" routerDirection="root" routerLinkActive="active">
+                  <ion-icon [name]="p.icon" slot="start"></ion-icon>   
+                  <ion-label>
+                        {{p.title}}
+                    </ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+    
+            <ion-item button *ngIf="p.children?.length > 0" (click)="p.open = !p.open"
+               [class.active-parent]="p.open" detail="false">
+               <ion-icon slot="start" name="arrow-forward" *ngIf="!p.open"></ion-icon>
+               <ion-icon slot="start" name="arrow-down" *ngIf="p.open"></ion-icon>
+               <ion-label>{{p.title}}</ion-label>
+            </ion-item>
+    
+            <!--only visible if the parent category is open-->
+            <ion-list *ngIf="p.open">
+                <ion-menu-toggle auto-hide="false">
+                    <ion-item class="sub-item" *ngFor="let sub of p.children" [routerLink]="sub.url" routerDirection="root" routerLinkActive="active">
+                      <ion-icon [name]="sub.icon" slot="start"></ion-icon> 
+                      <ion-label>
+                            {{sub.title}}
+                        </ion-label>
+                  </ion-item> 
+                </ion-menu-toggle>
+            </ion-list>
+    
+          </div>
         <!--added onclick  function for logout that will show confirmation alert-->
         <ion-item tappable (click)="presentAlertConfirm()">
           <ion-icon name="log-out" slot="start"></ion-icon>
             Logout
         </ion-item>
+     </ion-content>
 
-      </ion-list>
-      
-    </ion-content>
-
-  </ion-menu>
-  <ion-router-outlet id="content" main></ion-router-outlet>
-
-</ion-split-pane>
+    </ion-menu>
+  
+    <ion-router-outlet id="content" main></ion-router-outlet>
+  </ion-split-pane>

@@ -1,0 +1,17 @@
+// Larisa Pyykölä, student number 1702357
+.edu{
+        padding: 1em;
+        background: white;
+        opacity: 0.90;
+        
+
+}
+:host {
+    ion-content {
+      --background: url('../../../assets/imgs/education.jpg')no-repeat center center / cover;
+    }
+  }
+ 
+  p {
+      font-size: 1.1em;
+  }

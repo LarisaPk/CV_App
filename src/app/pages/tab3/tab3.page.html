@@ -9,44 +9,21 @@
     </ion-toolbar>
   </ion-header>
 
-<!--used grid for adding my contacts-->
-<!--TODO - add some styling to this page, so it looks better-->
-<ion-content>
+<!--added icons with contact information in ion-items-->
+<ion-content padding>
     <ion-item>
-        Test icon <fa-icon [icon]="['fas', 'ice-cream']" size ="3x" slot="end"></fa-icon>
-      </ion-item>
-  
-      <ion-item>
-        Test icon <fa-icon [icon]="['fas', 'pizza-slice']" [spin]="true" slot="end"></fa-icon>
-      </ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-icon name="call"></ion-icon> Phone:
-      </ion-col>
-      <ion-col>
-        +358 40 584 88 34 
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-        <ion-col>
-          <ion-icon name="mail"></ion-icon> Email:
-        </ion-col>
-        <ion-col>
-          larisa.pyykola@gmail.com 
-        </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-icon name="flag"></ion-icon> Address:
-      </ion-col>
-      <ion-col>
-        Espoo 
-      </ion-col>
-    </ion-row>
-    
-  </ion-grid>
-  
+       <fa-icon [icon]="['fas', 'phone-square']" size ="2x" slot="start"></fa-icon> Phone: +358 40 584 88 34  
+    </ion-item>
+    <ion-item>
+        <fa-icon [icon]="['fas', 'envelope-square']" size ="2x" slot="start"></fa-icon> Email: larisa.pyykola@gmail.com 
+     </ion-item>
+     <ion-item href="https://www.linkedin.com/in/larisa-pyykola/">
+        <fa-icon [icon]="['fab', 'linkedin']" size ="2x" slot="start"></fa-icon> LinkedIn: https://www.linkedin.com/in/larisa-pyykola/
+     </ion-item>
+     <ion-item  href="https://github.com/LarisaPk">
+        <fa-icon [icon]="['fab', 'github']" size ="2x" slot="start"></fa-icon> GitHub: https://github.com/LarisaPk
+     </ion-item>
+     <ion-item>
+        <fa-icon [icon]="['fas', 'map-marked-alt']" size ="2x" slot="start"></fa-icon> Address: Espoo, Finland 
+     </ion-item>  
 </ion-content> 

@@ -8,7 +8,9 @@ const routes: Routes = [ // after users logs in it redirects to the login page a
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
-
+ /* { path: 'soft', loadChildren: './pages/soft/soft.module#SoftPageModule' },
+  { path: 'technical', loadChildren: './pages/technical/technical.module#TechnicalPageModule' },
+*/
 
 
  /*

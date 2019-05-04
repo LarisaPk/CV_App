@@ -21,10 +21,25 @@ pages = [// array of pages in the menu
     icon: 'paper' // added icon for menu CV
   },
   {
-    title: 'My Projects', // page ith my projects
+    title: 'My Projects', // page with my projects
     url: '/menu/second',
     icon: 'hammer'// added ion for menu projects
   },
+  {
+    title: 'Skills', // page with my Skills
+    children: [
+      {
+        title: 'Soft Skills', // subcategory page with Soft Skills
+        url: '/menu/soft',
+        icon : 'happy'
+      },
+      {
+        title: 'Technical Skills', // subcategory page with Technical Skills
+        url: '/menu/technical',
+        icon : 'laptop'
+      }
+    ]
+    },
   {
     title: 'Extra curriculum', // page with extra curriculum
     url: '/menu/curriculum',

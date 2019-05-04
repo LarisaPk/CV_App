@@ -25,6 +25,14 @@ const routes: Routes = [
       {
       path: 'curriculum', // page with extra curriculum
       loadChildren: '../curriculum/curriculum.module#CurriculumPageModule'
+      },
+      {
+        path: 'soft', // page with  soft skills
+        loadChildren: '../soft/soft.module#SoftPageModule'
+      },
+      {
+        path: 'technical', // page with  technical skills
+        loadChildren: '../technical/technical.module#TechnicalPageModule'
       }
 
     ]
