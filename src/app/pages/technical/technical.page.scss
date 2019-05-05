@@ -1,0 +1,17 @@
+// Larisa Pyykölä, student number 1702357
+
+:host {
+    ion-content {
+      --background: url('../../../assets/imgs/tech.jpg')no-repeat center center / cover;// backgroung 
+    }
+  }
+
+.techSkills{
+        padding: 1em;
+        background: white;
+        opacity: 0.90;     
+}
+
+li {
+    padding: 0.5em;
+}
